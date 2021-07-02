@@ -41,18 +41,4 @@ function draw() {
 
 }
 
-function readFoodStock(data){
-  foodS = data.val();
-}
 
-
-function writeStock(foodS){
-  if(foodS>0)
-    var foodNew = foodS-1;
-  else
-    var foodNew = foodS;
-  database.ref('/').update({
-    foodS:foodNew
-
-  })
-}
